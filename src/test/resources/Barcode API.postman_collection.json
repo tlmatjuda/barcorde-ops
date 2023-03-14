@@ -1,0 +1,37 @@
+{
+	"info": {
+		"_postman_id": "88441101-6c12-4e5a-b5d1-1a29a8a24efd",
+		"name": "Barcode API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3955895"
+	},
+	"item": [
+		{
+			"name": "Generate QR Code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9003/barcode-app/qr/generate?content=TLMatjuda",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"barcode-app",
+						"qr",
+						"generate"
+					],
+					"query": [
+						{
+							"key": "content",
+							"value": "TLMatjuda"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
