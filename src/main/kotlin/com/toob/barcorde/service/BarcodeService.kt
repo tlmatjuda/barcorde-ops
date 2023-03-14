@@ -35,13 +35,4 @@ class BarcodeService(
 
         return BarcodeResponse( contentToEncode, outStream.toByteArray())
     }
-
-    private fun qrFileAsByteArray(contentToEncode: String): ByteArray {
-        val outStream = ByteArrayOutputStream()
-        val bitMatrix: BitMatrix = qrCodeWriter.encode(contentToEncode, BarcodeFormat.QR_CODE, 250, 250)
-        val matrixToImageConfig = MatrixToImageConfig(QR_HEX_ON_BLACK.toInt(), QR_HEX_ON_WHITE.toInt())
-        MatrixToImageWriter.writeToStream( bitMatrix, "PNG", outStream, matrixToImageConfig)
-
-        return outStream.toByteArray()
-    }
 }

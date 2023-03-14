@@ -6,9 +6,5 @@ package com.toob.barcorde.exception
  * @since: 2023-03-14
  */
 
-class BarcodeTechnicalException: RuntimeException {
-    constructor ()
-    constructor (message: String?)
-    constructor (message: String?, cause: Throwable?)
-    constructor (cause: Throwable?)
-}
+
+class BarcodeTechnicalException( override val message: String?) : RuntimeException(message)
