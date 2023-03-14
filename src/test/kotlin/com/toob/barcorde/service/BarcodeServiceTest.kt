@@ -23,9 +23,9 @@ class BarcodeServiceTest {
     fun `Test That I Can Generate QR Code Image As BarcodeResponse`() {
         assertNotNull( barcodeService)
         val barcodeResponse = barcodeService.generateQrCodeImage("Thabo Matjuda")
-        assertNotNull( barcodeResponse.contentToEncode)
+        assertNotNull( barcodeResponse.contentArg)
         assertNotNull( barcodeResponse.encoded)
 
-        assertEquals("Thabo Matjuda", barcodeResponse.contentToEncode)
+        assertEquals("Thabo Matjuda", barcodeResponse.contentArg)
     }
 }
