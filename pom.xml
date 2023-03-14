@@ -15,34 +15,41 @@
 	<groupId>com.toob</groupId>
 	<artifactId>barcorde-ops</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>barcorde-ops</name>
-	<description>QA Generation Service</description>
+	<name>Barcode Operations</name>
+	<description>QR Generation Service</description>
 
 
 	<properties>
 		<java.version>17</java.version>
-		<kotlin.version>1.6.21</kotlin.version>
+		<kotlin.version>1.7.21</kotlin.version>
+		<google.zxing.version>3.5.0</google.zxing.version>
 	</properties>
 
 	
 	<dependencies>
+
+		<!--
+			SPRING GOODIES
+		-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>com.fasterxml.jackson.module</groupId>
-			<artifactId>jackson-module-kotlin</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-undertow</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.jetbrains.kotlin</groupId>
-			<artifactId>kotlin-reflect</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.jetbrains.kotlin</groupId>
-			<artifactId>kotlin-stdlib-jdk8</artifactId>
-		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -54,15 +61,47 @@
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
+
+
+		<!--
+			KOTLIN STUFF
+		-->
+		<dependency>
+			<groupId>com.fasterxml.jackson.module</groupId>
+			<artifactId>jackson-module-kotlin</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.jetbrains.kotlin</groupId>
+			<artifactId>kotlin-reflect</artifactId>
+		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.jetbrains.kotlin</groupId>-->
+<!--			<artifactId>kotlin-stdlib-jdk8</artifactId>-->
+<!--		</dependency>-->
+
+
+		<!--
+			GOOGLE SWEETS - QR Library
+		-->
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>core</artifactId>
+			<version>${google.zxing.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>javase</artifactId>
+			<version>${google.zxing.version}</version>
+		</dependency>
+
+
+		<!--
+			GENERAL TOOLS
+		-->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
