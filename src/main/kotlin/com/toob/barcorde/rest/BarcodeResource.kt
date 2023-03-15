@@ -53,8 +53,8 @@ class BarcodeResource(
             val encodedQRImage: BarcodeResponse = barcodeService.encodeToQR(content)
             response = ResponseEntity.ok().body( encodedQRImage)
         } catch (exception: Exception) {
-            log.error( exception.message, exception)
-            throw BarcodeTechnicalException("Error while generating a QR Image from your content : $content")
+            log.error( exception.message)
+            throw BarcodeTechnicalException( exception.message)
         }
 
         return response;
