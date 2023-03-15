@@ -1,5 +1,6 @@
 package com.toob.barcorde.config
 
+import com.google.zxing.qrcode.QRCodeReader
 import com.google.zxing.qrcode.QRCodeWriter
 import lombok.extern.slf4j.Slf4j
 import org.springframework.context.annotation.Bean
@@ -23,6 +24,16 @@ class BarcodeAppConfig {
     @Bean
     fun qrCodeWriter(): QRCodeWriter {
         return QRCodeWriter()
+    }
+
+
+    /**
+     * QR Code Reader from Google's ZXing
+     * Declaring a bean that we will use to read content from a QR Code Image.
+     */
+    @Bean
+    fun qrCodeReader(): QRCodeReader {
+        return QRCodeReader()
     }
 
 }

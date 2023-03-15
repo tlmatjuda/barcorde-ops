@@ -19,13 +19,18 @@ class BarcodeServiceTest {
     @Autowired
     lateinit var barcodeService: BarcodeService
 
-    @Test
-    fun `Test That I Can Generate QR Code Image As BarcodeResponse`() {
-        assertNotNull( barcodeService)
-        val barcodeResponse = barcodeService.generateQrCodeImage("Thabo Matjuda")
-        assertNotNull( barcodeResponse.contentArg)
-        assertNotNull( barcodeResponse.encoded)
 
-        assertEquals("Thabo Matjuda", barcodeResponse.contentArg)
+    @Test
+    fun `Test That We Can Encode & Decode Content From QR Code File`() {
+        var barcodeResponse = barcodeService.encodeToQR("Thabo Matjuda")
+        assertTrue( barcodeResponse.content.isNotBlank())
+        assertTrue( barcodeResponse.encoded.isNotEmpty())
+        assertEquals("Thabo Matjuda", barcodeResponse.content)
+        log.info("The context data : ${barcodeResponse.content} has been encoded into a QR Code Image ByteArray : ${String(barcodeResponse.encoded)}")
+
+        val decoded = barcodeService.decodeFromQR(barcodeResponse.encoded)
+        assertTrue( decoded.isNotEmpty())
+        assertEquals("Thabo Matjuda", decoded)
+        log.info("Now we have decoded the content : ${String(barcodeResponse.encoded)} to the original content : $decoded")
     }
 }

@@ -50,7 +50,7 @@ class BarcodeResource(
 
         // When all is good and we are happy then we can try to encode and see how that goes.
         try {
-            val encodedQRImage: BarcodeResponse = barcodeService.generateQrCodeImage(content)
+            val encodedQRImage: BarcodeResponse = barcodeService.encodeToQR(content)
             response = ResponseEntity.ok().body( encodedQRImage)
         } catch (exception: Exception) {
             log.error( exception.message, exception)
