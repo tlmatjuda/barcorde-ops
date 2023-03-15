@@ -14,7 +14,7 @@ To get the started, let's first look at the tech stack.
 
 ## Setting Up The Codebase
 
-* Close the repo
+* Clon[](https://)e the repo
 * Change to that directory and build the project with tests : `mvn clean install`
 * Or build without tests : `mvn clean install -DskipTests=true`
 
@@ -23,7 +23,7 @@ To get the started, let's first look at the tech stack.
 
 You can run the app via the jar after building the app.
 
-This .jar file should be in your /target folder, so you : 
+[](https://)This .jar file should be in your /target folder, so you :
 
 ```bash
 java -jar target/barcorde-ops-0.0.1-SNAPSHOT.jar
