@@ -48,7 +48,7 @@ Once you have encoded the data you want to encode then you can use [Code Beautif
 
 * Copy the encoded field from the response json.
 * Paste it in the left text area on the Code Beautify element
-* Click the **"Generate"** button
+* Click the **"Generate Image[](https://)"** button
 
 
 This will use your pasted Base64 ByteArray to generate a QR code file and when you scan this file on the site you should be able to see the original text you wanted to encode.
