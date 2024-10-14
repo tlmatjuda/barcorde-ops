@@ -161,7 +161,7 @@
 					<compilerPlugins>
 						<plugin>spring</plugin>
 					</compilerPlugins>
-					<jvmTarget>${java.version}</jvmTarget> <!-- or 1.8 depending on your target -->
+					<jvmTarget>${java.version}</jvmTarget>
 				</configuration>
 				<dependencies>
 					<dependency>

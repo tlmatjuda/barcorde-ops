@@ -7,10 +7,10 @@ To get the started, let's first look at the tech stack.
 
 ## Tech Stack
 
-* Kotlin 1.7.21 *( for JVM Target )*
+* Kotlin 2.0.20 *( for JVM Target )*
 * Java 17
 * Maven 3.8.x
-* Spring Boot with Spring Framework 5.3.x
+* Spring Boot v3.3.x with Spring Framework 6.1.x
 * [Mockk](https://mockk.io/) : Testing Framework
 
 ## Setting Up The Codebase
@@ -52,3 +52,5 @@ This will use your pasted Base64 ByteArray to generate a QR code file and when y
 ## Conclusion
 
 That's it for a Kotlin for JVM based Spring Boot Web App.
+
+[](https://)
