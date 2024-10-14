@@ -14,7 +14,7 @@
 	<properties>
 		<java.version>17</java.version>
 		<kotlin.version>2.0.20</kotlin.version>
-		<google.zxing.version>3.5.0</google.zxing.version>
+		<google.zxing.version>3.5.3</google.zxing.version>
 		<spring-boot.version>3.3.4</spring-boot.version>
 	</properties>
 
@@ -100,10 +100,6 @@
 			<groupId>org.jetbrains.kotlin</groupId>
 			<artifactId>kotlin-reflect</artifactId>
 		</dependency>
-<!--		<dependency>-->
-<!--			<groupId>org.jetbrains.kotlin</groupId>-->
-<!--			<artifactId>kotlin-stdlib-jdk8</artifactId>-->
-<!--		</dependency>-->
 
 
 		<!--
